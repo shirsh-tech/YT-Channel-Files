@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web ScrenShot Grabber</title>
+</head>
+
+<body>
+    <style>
+        * {
+            text-align: center;
+        }
+        body {
+            background: rgb(3, 5, 24);
+            color: aquamarine;
+        }
+
+        header {
+            background: rgb(45, 24, 46);
+            position: fixed;
+            top: 2px;
+            width: 100%;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 25px;
+        }
+
+        .grabbed img {
+            max-width: 600px;
+            max-height: 500px;
+            border: 2px solid red;
+        }
+
+        input,
+        button {
+            font-size: 25px;
+            padding: 8px;
+            border: 0ch;
+            border-bottom: 2px solid aqua;
+            border-radius: 5px;
+            outline: none;
+            background: rgb(6, 13, 34);
+            color: hotpink;
+            margin: 4px;
+        }
+        .grabbed {
+            padding: 5px;
+            margin-top : 50px;
+        }
+    </style>
+    <script>
+        if(window.location.hash.length > 3) {
+            window.location.href = 'https://cdn.statically.io/screenshot/'+window.location.hash.substr(1) ;
+        }
+    </script>
+    <header>
+        https:// <input type="text" name="url" placeholder="Enter URL Here" id="url">
+        <button onclick="clicked()">GRAB SCREENSHOT</button>
+    </header>
+
+
+    <div class="grabbed">
+        <div id="image">
+            <img src="" alt="" srcset="">
+        </div>
+        <div id="code">
+            <h3>Please Remove https:// or http:// before Grabbing ScreenShot </h3>
+        </div>
+    </div>
+    
+
+    <script>
+        function clicked() {
+            var url = document.getElementById('url').value;
+            var imgurl = "https://cdn.statically.io/screenshot/"+url;
+            document.getElementById('image').innerHTML = '<img src="https://cdn.statically.io/screenshot/' + url +'" alt="' + url + '" srcset="">';
+            document.getElementById('code').innerHTML = 'Your Code here ... <br><div style="background-color: #1e1e1e; color: #d4d4d4; font-family: Consolas, &quot;Courier New&quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;"><span style="color: grey;">&lt;</span><span style="color: #569cd6;">img</span>&nbsp;<span style="color: #9cdcfe;">width</span>=<span style="color: #ce9178;">"600px"</span>&nbsp;<span style="color: #9cdcfe;">src</span>=<span style="color: #ce9178;">"'+ imgurl +'"</span>&nbsp;<span style="color: #9cdcfe;"><br>alt</span>=<span style="color: #ce9178;">"'+imgurl+'SH20RAJ"</span>&nbsp;<span style="color: #9cdcfe;">srcset</span>=<span style="color: #ce9178;">""</span><span style="color: grey;">&gt;</span></div>';
+        }
+
+
+    </script>
+</body>
+
+</html>

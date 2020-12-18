@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://sh20raj.github.io/BlondBtun/blondbtun.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <style>
+        body {
+        }
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            background-color: rgb(77, 209, 209);
+            color: red;
+        }
+        #hidden {
+            display: none;
+            text-align: center;
+        }
+        .ci {
+            
+        }
+        .ci img {
+            border-radius: 50%;border: 2px solid red;
+        }
+
+        #main button {
+            background-color: red;
+        }
+    </style>
+<h1><span class="bttn-stretch bttn-md">Subscribe and Turn Notification On to Unlock The Link</span></h1>
+<br>
+    <div class="middle">
+
+    <br>
+    <div id="main">
+    <div class="ci"><img src="https://yt3.ggpht.com/ytc/AAUvwnjeVZlWBpwhadvtvWcTfRExu5mlSdcS7DYAPwhQ=s88-c-k-c0x00ffffff-no-rj" alt="Channel Logo" srcset=""></div>
+    <br><br><br><br>
+    <button onclick="unlock()" class="rief rief-center" id="unlock"> SUBSCRIBE</button>
+    </div>
+
+
+    <div id="hidden">
+        <img width="100%" src="vf.gif" alt="">
+        <button class="rief rief-center"> VERIFYING... </button> <br>
+    </div>
+
+    <script>
+        var url = "";
+        var channel = "https://www.youtube.com/channel/UCFPFrVOaeG3q1PEzpeh7hCg?sub_confirmation=1";
+        var id = window.location.search.substr(3) ;
+        switch (id) {
+        case 'wwe' :
+            url = "https://google.com/";
+            break;
+        case '-tqbUYed3Pc' :
+            url = "https://codexdindie.blogspot.com/2020/12/get-unlimited-views-on-blogger.html";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case  6:
+            day = "Saturday";
+        }
+        function unlock() {
+            document.getElementById('hidden').style.display = "inline-block";
+            document.getElementById('main').style.display = "none";
+            window.open(channel)
+            verified();
+        }
+
+        function verified() {
+            setTimeout(function(){window.location.href = url ; }, 5000);
+            
+        }
+    </script>
+
+</div>
+</body>
+</html>
